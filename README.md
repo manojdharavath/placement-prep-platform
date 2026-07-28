@@ -1,79 +1,40 @@
-# AI Placement Prep Platform
+# PlacementPrep – AI-Powered Placement Preparation Platform
 
-A full-stack placement preparation platform designed to help students prepare for technical placements through DSA practice, mock tests, company-specific preparation, resume analysis, interview practice, and AI-powered guidance.
+PlacementPrep is a full-stack web application designed to help students prepare for campus placements through a single integrated platform.
 
-The platform brings important placement preparation activities into one application with a simple and structured user experience.
-
----
+It combines DSA practice, mock assessments, company-specific preparation, resume analysis, AI-powered interview practice, and placement readiness tracking.
 
 ## Features
 
-### User Authentication
-- User registration and login
-- JWT-based authentication
-- Protected application routes
-- Secure access to user-specific features
+- **User Authentication**
+  - Secure registration and login
+  - JWT-based authentication
+  - Protected routes
 
-### Dashboard
-- Centralized placement preparation dashboard
-- Quick access to major preparation modules
-- Displays preparation-related information and progress
-- AI-powered guidance integrated into the dashboard
+- **DSA Practice**
+  - Track DSA preparation
+  - Organize and monitor problem-solving progress
 
-### DSA Tracker
-- Topic-wise DSA preparation
-- Practice problems across important DSA topics
-- Track problem-solving progress
-- Structured preparation for coding interviews
+- **Mock Tests**
+  - Take placement-oriented assessments
+  - Track test performance
 
-DSA topics include:
+- **Company DNA**
+  - Company-specific placement preparation
+  - Understand important preparation areas for different companies
 
-- Arrays
-- Strings
-- Linked Lists
-- Stack
-- Queue
-- Binary Search
-- Trees
-- Graphs
-- Heap
-- Dynamic Programming
+- **AI Resume Analyzer**
+  - Analyze resumes
+  - Receive AI-generated feedback and improvement suggestions
 
-### Mock Tests
-- Placement-oriented mock tests
-- Dedicated test interface
-- Submit answers and evaluate performance
-- Store test results for progress tracking
+- **AI Interview Simulator**
+  - Practice interview questions
+  - Receive AI-powered responses and feedback
 
-### Company DNA
-- Company-specific placement preparation
-- Helps students understand preparation requirements for different companies
-- Provides focused preparation guidance
-- AI-assisted company preparation support
-
-### Resume Analyzer
-- Resume analysis for placement preparation
-- AI-assisted resume feedback
-- Helps identify possible improvements in a candidate's resume
-
-### Interview Simulator
-- Practice technical and interview questions
-- AI-assisted interview interaction
-- Helps students improve their interview preparation
-- Interview results can be stored for tracking
-
-### AI Assistance
-- AI-powered preparation support
-- Personalized guidance across different preparation modules
-- AI services integrated with the backend
-- Helps make placement preparation more interactive
-
-### Progress Tracking
-- Tracks preparation progress
-- Stores user activity and results
-- Helps users monitor their preparation over time
-
----
+- **Placement Readiness Dashboard**
+  - Centralized overview of preparation progress
+  - Placement Readiness Index (PRI)
+  - Tracks DSA, mock tests, consistency, and interview preparation
 
 ## Tech Stack
 
@@ -82,8 +43,8 @@ DSA topics include:
 - React.js
 - Vite
 - JavaScript
-- HTML5
-- CSS3
+- CSS
+- Axios
 - React Router
 
 ### Backend
@@ -98,309 +59,120 @@ DSA topics include:
 - MongoDB
 - Mongoose
 
-### AI
+### AI Integration
 
-- AI API integration
-- AI-powered placement guidance
-- Resume analysis
-- Interview assistance
-- Company-specific preparation assistance
+- Groq API
 
-### Development Tools
+### Deployment
 
-- Git
-- GitHub
-- VS Code
-- npm
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
 
----
+## Project Architecture
+
+```text
+User
+ │
+ ▼
+React + Vite Frontend
+ │
+ │ REST API Requests
+ ▼
+Node.js + Express Backend
+ │
+ ├── Authentication
+ ├── DSA APIs
+ ├── Mock Test APIs
+ ├── Dashboard APIs
+ ├── Resume Analyzer
+ ├── Interview Simulator
+ │
+ ▼
+MongoDB Atlas
+```
 
 ## Project Structure
 
 ```text
 placement-prep-platform/
 │
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   └── services/
+│   └── package.json
+│
 ├── backend/
-│   ├── config/
 │   ├── controllers/
-│   ├── data/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── seed/
-│   ├── services/
-│   ├── .gitignore
-│   ├── package.json
-│   └── server.js
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── data/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── index.css
-│   │   └── main.jsx
-│   │
-│   ├── package.json
-│   └── vite.config.js
+│   ├── server.js
+│   └── package.json
 │
 └── README.md
 ```
 
----
+## Installation
 
-## Application Modules
-
-```text
-Authentication
-      │
-      ▼
-   Dashboard
-      │
-      ├── DSA Tracker
-      │
-      ├── Mock Tests
-      │
-      ├── Company DNA
-      │
-      ├── Resume Analyzer
-      │
-      └── Interview Simulator
-```
-
----
-
-## How It Works
-
-The React frontend provides the user interface for the platform.
-
-The frontend communicates with the Node.js and Express backend through REST APIs.
-
-The backend handles:
-
-- Authentication
-- DSA problems
-- Mock tests
-- User progress
-- Dashboard data
-- Company preparation
-- Resume analysis
-- Interview functionality
-- AI-related requests
-
-MongoDB is used to store application data.
-
----
-
-## Getting Started
-
-### Prerequisites
-
-Make sure you have installed:
-
-- Node.js
-- npm
-- Git
-- MongoDB or MongoDB Atlas
-
----
-
-## Clone the Repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/manojdharavath/placement-prep-platform.git
-```
-
-Then:
-
-```bash
+git clone <your-repository-url>
 cd placement-prep-platform
 ```
 
----
-
-## Backend Setup
-
-Move to the backend directory:
+Install backend dependencies:
 
 ```bash
 cd backend
-```
-
-Install dependencies:
-
-```bash
 npm install
 ```
 
-Create a `.env` file inside the `backend` folder.
-
-Add the environment variables required by the application, for example:
+Create a `.env` file inside the backend directory:
 
 ```env
-PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+GROQ_API_KEY=your_groq_api_key
 ```
 
-Add the required AI API credentials according to your local configuration.
-
-Start the backend using the script configured in `backend/package.json`.
-
-For example:
+Start the backend:
 
 ```bash
-npm start
+node server.js
 ```
 
-or:
+Install and start the frontend:
 
 ```bash
-npm run dev
-```
-
----
-
-## Frontend Setup
-
-Open another terminal and move to the frontend directory:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
+cd ../frontend
 npm install
-```
-
-Configure the required frontend environment variables in a local `.env` file.
-
-Start the frontend:
-
-```bash
 npm run dev
 ```
-
-The application will run on the local URL provided by Vite.
-
----
-
-## Environment Variables
-
-Environment files are excluded from GitHub using `.gitignore`.
-
-```text
-.env
-.env.*
-```
-
-Sensitive information such as:
-
-- MongoDB connection strings
-- JWT secrets
-- AI API keys
-
-should never be committed to the repository.
-
----
 
 ## Security
 
-The project includes:
+Sensitive credentials such as database connection strings, JWT secrets, and API keys are stored using environment variables and are not committed to the repository.
 
-- JWT-based authentication
-- Protected frontend routes
-- Authentication middleware
-- Protected backend endpoints
-- Environment variables for sensitive credentials
+## Live Demo
 
----
-
-## Screenshots
-
-Screenshots of the final deployed application will be added here.
-
-### Dashboard
-
-Coming soon.
-
-### DSA Tracker
-
-Coming soon.
-
-### Mock Tests
-
-Coming soon.
-
-### Company DNA
-
-Coming soon.
-
-### Resume Analyzer
-
-Coming soon.
-
-### Interview Simulator
-
-Coming soon.
-
----
-
-## Deployment
-
-The application will be deployed after final production configuration and testing.
-
-**Live Demo:** Coming Soon
-
----
-
+[View PlacementPrep Live](
+placement-prep-platform-kulkvu0fn-manojdharavaths-projects.vercel.app)
 ## Future Improvements
 
-Possible future improvements include:
-
-- Additional DSA problems
-- More company-specific preparation content
-- More mock-test questions
-- Enhanced AI recommendations
-- Improved interview analysis
-- Advanced progress analytics
-- UI and performance improvements
-
----
+- Forgot password and email verification
+- Advanced placement analytics
+- More company-specific preparation data
+- Improved AI interview evaluation
+- Personalized preparation recommendations
 
 ## Author
 
 **Dharavath Manoj**
 
-B.Tech - Electronics and Communication Engineering  
+B.Tech – Electronics and Communication Engineering  
 Malaviya National Institute of Technology Jaipur
-
-GitHub:  
-https://github.com/manojdharavath
-
----
-
-## Project Status
-
-Core development is complete.
-
-Current finalization work:
-
-- GitHub documentation
-- Production deployment
-- Final testing
-
----
-
-## Repository
-
-GitHub Repository:
-
-https://github.com/manojdharavath/placement-prep-platform
