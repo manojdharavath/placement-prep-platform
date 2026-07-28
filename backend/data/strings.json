@@ -1,0 +1,178 @@
+[
+  {
+    "id": 26,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/valid-anagram/"
+  },
+  {
+    "id": 27,
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Meta", "Microsoft"],
+    "url": "https://leetcode.com/problems/valid-palindrome/"
+  },
+  {
+    "id": 28,
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "companies": ["Google", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/longest-common-prefix/"
+  },
+  {
+    "id": 29,
+    "title": "Implement strStr()",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+  },
+  {
+    "id": 30,
+    "title": "Reverse String",
+    "difficulty": "Easy",
+    "companies": ["Microsoft", "Apple"],
+    "url": "https://leetcode.com/problems/reverse-string/"
+  },
+  {
+    "id": 31,
+    "title": "Reverse Words in a String",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://leetcode.com/problems/reverse-words-in-a-string/"
+  },
+  {
+    "id": 32,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta", "Adobe"],
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+  },
+  {
+    "id": 33,
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://leetcode.com/problems/longest-palindromic-substring/"
+  },
+  {
+    "id": 34,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Meta", "Google"],
+    "url": "https://leetcode.com/problems/group-anagrams/"
+  },
+  {
+    "id": 35,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Google", "Meta"],
+    "url": "https://leetcode.com/problems/minimum-window-substring/"
+  }
+  ,
+{
+  "id": 36,
+  "title": "Valid Parentheses",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+  "url": "https://leetcode.com/problems/valid-parentheses/"
+},
+{
+  "id": 37,
+  "title": "Roman to Integer",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Apple"],
+  "url": "https://leetcode.com/problems/roman-to-integer/"
+},
+{
+  "id": 38,
+  "title": "Integer to Roman",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/integer-to-roman/"
+},
+{
+  "id": 39,
+  "title": "Encode and Decode Strings",
+  "difficulty": "Medium",
+  "companies": ["Google", "Meta", "Amazon"],
+  "url": "https://leetcode.com/problems/encode-and-decode-strings/"
+},
+{
+  "id": 40,
+  "title": "String Compression",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Apple", "Google"],
+  "url": "https://leetcode.com/problems/string-compression/"
+},
+{
+  "id": 41,
+  "title": "Multiply Strings",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Adobe"],
+  "url": "https://leetcode.com/problems/multiply-strings/"
+},
+{
+  "id": 42,
+  "title": "Zigzag Conversion",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/zigzag-conversion/"
+},
+{
+  "id": 43,
+  "title": "Palindrome Partitioning",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/palindrome-partitioning/"
+},
+{
+  "id": 44,
+  "title": "Count and Say",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/count-and-say/"
+},
+{
+  "id": 45,
+  "title": "Longest Repeating Character Replacement",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Meta", "Google"],
+  "url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+},
+{
+  "id": 46,
+  "title": "Isomorphic Strings",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/isomorphic-strings/"
+},
+{
+  "id": 47,
+  "title": "Word Pattern",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/word-pattern/"
+},
+{
+  "id": 48,
+  "title": "Longest Happy Prefix",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon"],
+  "url": "https://leetcode.com/problems/longest-happy-prefix/"
+},
+{
+  "id": 49,
+  "title": "Find the Difference",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Adobe"],
+  "url": "https://leetcode.com/problems/find-the-difference/"
+},
+{
+  "id": 50,
+  "title": "Buddy Strings",
+  "difficulty": "Easy",
+  "companies": ["Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/buddy-strings/"
+}
+]

@@ -1,0 +1,204 @@
+[
+  {
+    "id": 201,
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+    "tags": ["Heap", "Priority Queue"],
+    "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+  },
+  {
+    "id": 202,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "tags": ["Heap", "Hash Map"],
+    "url": "https://leetcode.com/problems/top-k-frequent-elements/"
+  },
+  {
+    "id": 203,
+    "title": "K Closest Points to Origin",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "tags": ["Heap", "Geometry"],
+    "url": "https://leetcode.com/problems/k-closest-points-to-origin/"
+  },
+  {
+    "id": 204,
+    "title": "Last Stone Weight",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google"],
+    "tags": ["Heap"],
+    "url": "https://leetcode.com/problems/last-stone-weight/"
+  },
+  {
+    "id": 205,
+    "title": "Find Median from Data Stream",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+    "tags": ["Heap", "Design"],
+    "url": "https://leetcode.com/problems/find-median-from-data-stream/"
+  },
+  {
+    "id": 206,
+    "title": "Sort Characters By Frequency",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "tags": ["Heap", "Hash Map"],
+    "url": "https://leetcode.com/problems/sort-characters-by-frequency/"
+  },
+  {
+    "id": 207,
+    "title": "Kth Largest Element in a Stream",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft"],
+    "tags": ["Heap", "Design"],
+    "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+  },
+  {
+    "id": 208,
+    "title": "Meeting Rooms II",
+    "difficulty": "Medium",
+    "companies": ["Google", "Amazon", "Microsoft"],
+    "tags": ["Heap", "Intervals"],
+    "url": "https://leetcode.com/problems/meeting-rooms-ii/"
+  },
+  {
+    "id": 209,
+    "title": "Merge k Sorted Lists",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "tags": ["Heap", "Linked List"],
+    "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+  },
+  {
+    "id": 210,
+    "title": "Smallest Range Covering Elements from K Lists",
+    "difficulty": "Hard",
+    "companies": ["Google", "Amazon"],
+    "tags": ["Heap", "Priority Queue"],
+    "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/"
+  }
+  ,
+{
+  "id": 211,
+  "title": "IPO",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Microsoft"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/ipo/"
+},
+{
+  "id": 212,
+  "title": "Maximum Performance of a Team",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/maximum-performance-of-a-team/"
+},
+{
+  "id": 213,
+  "title": "Reorganize String",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/reorganize-string/"
+},
+{
+  "id": 214,
+  "title": "Furthest Building You Can Reach",
+  "difficulty": "Medium",
+  "companies": ["Google", "Amazon"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/furthest-building-you-can-reach/"
+},
+{
+  "id": 215,
+  "title": "Minimum Cost to Hire K Workers",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/minimum-cost-to-hire-k-workers/"
+},
+{
+  "id": 216,
+  "title": "Seat Reservation Manager",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "tags": ["Heap", "Design"],
+  "url": "https://leetcode.com/problems/seat-reservation-manager/"
+},
+{
+  "id": 217,
+  "title": "Take Gifts From the Richest Pile",
+  "difficulty": "Easy",
+  "companies": ["Amazon"],
+  "tags": ["Heap"],
+  "url": "https://leetcode.com/problems/take-gifts-from-the-richest-pile/"
+},
+{
+  "id": 218,
+  "title": "Total Cost to Hire K Workers",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Heap", "Greedy"],
+  "url": "https://leetcode.com/problems/total-cost-to-hire-k-workers/"
+},
+{
+  "id": 219,
+  "title": "Find K Pairs with Smallest Sums",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Heap", "Priority Queue"],
+  "url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/"
+},
+{
+  "id": 220,
+  "title": "The Skyline Problem",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Microsoft"],
+  "tags": ["Heap", "Sweep Line"],
+  "url": "https://leetcode.com/problems/the-skyline-problem/"
+}
+,
+{
+  "id": 221,
+  "title": "Merge k Sorted Arrays",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Heap", "Merge"],
+  "url": "https://www.lintcode.com/problem/486/"
+},
+{
+  "id": 222,
+  "title": "Sliding Window Median",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Microsoft"],
+  "tags": ["Heap", "Sliding Window"],
+  "url": "https://leetcode.com/problems/sliding-window-median/"
+},
+{
+  "id": 223,
+  "title": "K Closest Elements",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Heap", "Binary Search"],
+  "url": "https://leetcode.com/problems/find-k-closest-elements/"
+},
+{
+  "id": 224,
+  "title": "Ugly Number II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "tags": ["Heap", "Dynamic Programming"],
+  "url": "https://leetcode.com/problems/ugly-number-ii/"
+},
+{
+  "id": 225,
+  "title": "Smallest Infinite Set",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Heap", "Design"],
+  "url": "https://leetcode.com/problems/smallest-number-in-infinite-set/"
+}
+]

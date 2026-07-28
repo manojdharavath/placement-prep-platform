@@ -1,0 +1,180 @@
+[
+  {
+    "id": 151,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "id": 152,
+    "title": "Min Stack",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+    "url": "https://leetcode.com/problems/min-stack/"
+  },
+  {
+    "id": 153,
+    "title": "Evaluate Reverse Polish Notation",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/"
+  },
+  {
+    "id": 154,
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "url": "https://leetcode.com/problems/daily-temperatures/"
+  },
+  {
+    "id": 155,
+    "title": "Next Greater Element I",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/next-greater-element-i/"
+  },
+  {
+    "id": 156,
+    "title": "Next Greater Element II",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/next-greater-element-ii/"
+  },
+  {
+    "id": 157,
+    "title": "Largest Rectangle in Histogram",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+    "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+  },
+  {
+    "id": 158,
+    "title": "Asteroid Collision",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/asteroid-collision/"
+  },
+  {
+    "id": 159,
+    "title": "Decode String",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "url": "https://leetcode.com/problems/decode-string/"
+  },
+  {
+    "id": 160,
+    "title": "Remove All Adjacent Duplicates in String",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/"
+  }
+  ,
+{
+  "id": 161,
+  "title": "Basic Calculator",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/basic-calculator/"
+},
+{
+  "id": 162,
+  "title": "Basic Calculator II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/basic-calculator-ii/"
+},
+{
+  "id": 163,
+  "title": "Score of Parentheses",
+  "difficulty": "Medium",
+  "companies": ["Google", "Amazon"],
+  "url": "https://leetcode.com/problems/score-of-parentheses/"
+},
+{
+  "id": 164,
+  "title": "Simplify Path",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Adobe"],
+  "url": "https://leetcode.com/problems/simplify-path/"
+},
+{
+  "id": 165,
+  "title": "Online Stock Span",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/online-stock-span/"
+},
+{
+  "id": 166,
+  "title": "Remove K Digits",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/remove-k-digits/"
+},
+{
+  "id": 167,
+  "title": "132 Pattern",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/132-pattern/"
+},
+{
+  "id": 168,
+  "title": "Exclusive Time of Functions",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Meta"],
+  "url": "https://leetcode.com/problems/exclusive-time-of-functions/"
+},
+{
+  "id": 169,
+  "title": "Maximum Frequency Stack",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/maximum-frequency-stack/"
+},
+{
+  "id": 170,
+  "title": "Remove Duplicate Letters",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Adobe"],
+  "url": "https://leetcode.com/problems/remove-duplicate-letters/"
+}
+,
+{
+  "id": 171,
+  "title": "Trapping Rain Water",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Meta", "Adobe"],
+  "url": "https://leetcode.com/problems/trapping-rain-water/"
+},
+{
+  "id": 172,
+  "title": "Sum of Subarray Minimums",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/sum-of-subarray-minimums/"
+},
+{
+  "id": 173,
+  "title": "Maximal Rectangle",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/maximal-rectangle/"
+},
+{
+  "id": 174,
+  "title": "Remove Outermost Parentheses",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/remove-outermost-parentheses/"
+},
+{
+  "id": 175,
+  "title": "Maximum Nesting Depth of the Parentheses",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/"
+}
+
+]

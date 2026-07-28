@@ -1,0 +1,180 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "id": 2,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "id": 3,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/contains-duplicate/"
+  },
+  {
+    "id": 4,
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Meta", "Microsoft"],
+    "url": "https://leetcode.com/problems/product-of-array-except-self/"
+  },
+  {
+    "id": 5,
+    "title": "Maximum Subarray",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Adobe"],
+    "url": "https://leetcode.com/problems/maximum-subarray/"
+  },
+  {
+    "id": 6,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "url": "https://leetcode.com/problems/merge-intervals/"
+  },
+  {
+    "id": 7,
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "companies": ["Microsoft", "Google"],
+    "url": "https://leetcode.com/problems/rotate-array/"
+  },
+  {
+    "id": 8,
+    "title": "Move Zeroes",
+    "difficulty": "Easy",
+    "companies": ["Meta", "Amazon"],
+    "url": "https://leetcode.com/problems/move-zeroes/"
+  },
+  {
+    "id": 9,
+    "title": "Majority Element",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/majority-element/"
+  },
+  {
+    "id": 10,
+    "title": "Sort Colors",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/sort-colors/"
+  }
+
+,
+{
+  "id": 11,
+  "title": "Remove Duplicates from Sorted Array",
+  "difficulty": "Easy",
+  "companies": ["Google", "Microsoft", "Amazon"],
+  "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+},
+{
+  "id": 12,
+  "title": "Remove Element",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Apple"],
+  "url": "https://leetcode.com/problems/remove-element/"
+},
+{
+  "id": 13,
+  "title": "Plus One",
+  "difficulty": "Easy",
+  "companies": ["Google", "Adobe"],
+  "url": "https://leetcode.com/problems/plus-one/"
+},
+{
+  "id": 14,
+  "title": "Pascal's Triangle",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/pascals-triangle/"
+},
+{
+  "id": 15,
+  "title": "Missing Number",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/missing-number/"
+},
+{
+  "id": 16,
+  "title": "Find All Numbers Disappeared in an Array",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Meta"],
+  "url": "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/"
+},
+{
+  "id": 17,
+  "title": "Maximum Product Subarray",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Adobe"],
+  "url": "https://leetcode.com/problems/maximum-product-subarray/"
+},
+{
+  "id": 18,
+  "title": "3Sum",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "url": "https://leetcode.com/problems/3sum/"
+},
+{
+  "id": 19,
+  "title": "Container With Most Water",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "url": "https://leetcode.com/problems/container-with-most-water/"
+},
+{
+  "id": 20,
+  "title": "Next Permutation",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/next-permutation/"
+}
+,
+{
+  "id": 21,
+  "title": "Longest Consecutive Sequence",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+  "url": "https://leetcode.com/problems/longest-consecutive-sequence/"
+},
+{
+  "id": 22,
+  "title": "Subarray Sum Equals K",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta", "Adobe"],
+  "url": "https://leetcode.com/problems/subarray-sum-equals-k/"
+},
+{
+  "id": 23,
+  "title": "Spiral Matrix",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Apple"],
+  "url": "https://leetcode.com/problems/spiral-matrix/"
+},
+{
+  "id": 24,
+  "title": "Set Matrix Zeroes",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/set-matrix-zeroes/"
+},
+{
+  "id": 25,
+  "title": "Trapping Rain Water",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Adobe", "Meta"],
+  "url": "https://leetcode.com/problems/trapping-rain-water/"
+}
+]

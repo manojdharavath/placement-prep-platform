@@ -1,0 +1,178 @@
+[
+  {
+    "id": 51,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Google", "Adobe"],
+    "url": "https://leetcode.com/problems/reverse-linked-list/"
+  },
+  {
+    "id": 52,
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/"
+  },
+  {
+    "id": 53,
+    "title": "Linked List Cycle",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Meta"],
+    "url": "https://leetcode.com/problems/linked-list-cycle/"
+  },
+  {
+    "id": 54,
+    "title": "Palindrome Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "url": "https://leetcode.com/problems/palindrome-linked-list/"
+  },
+  {
+    "id": 55,
+    "title": "Middle of the Linked List",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Adobe"],
+    "url": "https://leetcode.com/problems/middle-of-the-linked-list/"
+  },
+  {
+    "id": 56,
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Google"],
+    "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+  },
+  {
+    "id": 57,
+    "title": "Add Two Numbers",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "url": "https://leetcode.com/problems/add-two-numbers/"
+  },
+  {
+    "id": 58,
+    "title": "Intersection of Two Linked Lists",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Microsoft", "Adobe"],
+    "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+  },
+  {
+    "id": 59,
+    "title": "Odd Even Linked List",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/odd-even-linked-list/"
+  },
+  {
+    "id": 60,
+    "title": "Copy List with Random Pointer",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft", "Meta"],
+    "url": "https://leetcode.com/problems/copy-list-with-random-pointer/"
+  },
+{
+  "id": 61,
+  "title": "Reverse Nodes in k-Group",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Microsoft", "Google"],
+  "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/"
+},
+{
+  "id": 62,
+  "title": "Swap Nodes in Pairs",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Adobe"],
+  "url": "https://leetcode.com/problems/swap-nodes-in-pairs/"
+},
+{
+  "id": 63,
+  "title": "Rotate List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/rotate-list/"
+},
+{
+  "id": 64,
+  "title": "Partition List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/partition-list/"
+},
+{
+  "id": 65,
+  "title": "Sort List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Meta"],
+  "url": "https://leetcode.com/problems/sort-list/"
+},
+{
+  "id": 66,
+  "title": "Reorder List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "url": "https://leetcode.com/problems/reorder-list/"
+},
+{
+  "id": 67,
+  "title": "Delete Node in a Linked List",
+  "difficulty": "Easy",
+  "companies": ["Google", "Amazon"],
+  "url": "https://leetcode.com/problems/delete-node-in-a-linked-list/"
+},
+{
+  "id": 68,
+  "title": "Remove Linked List Elements",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/remove-linked-list-elements/"
+},
+{
+  "id": 69,
+  "title": "Reverse Linked List II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/reverse-linked-list-ii/"
+},
+{
+  "id": 70,
+  "title": "Split Linked List in Parts",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/split-linked-list-in-parts/"
+}
+,
+{
+  "id": 71,
+  "title": "Linked List Cycle II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Google"],
+  "url": "https://leetcode.com/problems/linked-list-cycle-ii/"
+},
+{
+  "id": 72,
+  "title": "Merge k Sorted Lists",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+  "url": "https://leetcode.com/problems/merge-k-sorted-lists/"
+},
+{
+  "id": 73,
+  "title": "LRU Cache",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+  "url": "https://leetcode.com/problems/lru-cache/"
+},
+{
+  "id": 74,
+  "title": "Flatten a Multilevel Doubly Linked List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/"
+},
+{
+  "id": 75,
+  "title": "Design Linked List",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/design-linked-list/"
+}
+]

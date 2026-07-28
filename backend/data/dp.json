@@ -1,0 +1,204 @@
+[
+  {
+    "id": 226,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft", "Adobe"],
+    "tags": ["Dynamic Programming", "Fibonacci"],
+    "url": "https://leetcode.com/problems/climbing-stairs/"
+  },
+  {
+    "id": 227,
+    "title": "Min Cost Climbing Stairs",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "tags": ["Dynamic Programming"],
+    "url": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+  },
+  {
+    "id": 228,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "tags": ["Dynamic Programming"],
+    "url": "https://leetcode.com/problems/house-robber/"
+  },
+  {
+    "id": 229,
+    "title": "House Robber II",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "tags": ["Dynamic Programming"],
+    "url": "https://leetcode.com/problems/house-robber-ii/"
+  },
+  {
+    "id": 230,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+    "tags": ["Dynamic Programming", "Knapsack"],
+    "url": "https://leetcode.com/problems/coin-change/"
+  },
+  {
+    "id": 231,
+    "title": "Coin Change II",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "tags": ["Dynamic Programming", "Knapsack"],
+    "url": "https://leetcode.com/problems/coin-change-ii/"
+  },
+  {
+    "id": 232,
+    "title": "Unique Paths",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "tags": ["Dynamic Programming", "Grid"],
+    "url": "https://leetcode.com/problems/unique-paths/"
+  },
+  {
+    "id": 233,
+    "title": "Unique Paths II",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "tags": ["Dynamic Programming", "Grid"],
+    "url": "https://leetcode.com/problems/unique-paths-ii/"
+  },
+  {
+    "id": 234,
+    "title": "Jump Game",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Meta"],
+    "tags": ["Dynamic Programming", "Greedy"],
+    "url": "https://leetcode.com/problems/jump-game/"
+  },
+  {
+    "id": 235,
+    "title": "Jump Game II",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "tags": ["Dynamic Programming", "Greedy"],
+    "url": "https://leetcode.com/problems/jump-game-ii/"
+  }
+  ,
+{
+  "id": 236,
+  "title": "Longest Increasing Subsequence",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+  "tags": ["Dynamic Programming", "Binary Search"],
+  "url": "https://leetcode.com/problems/longest-increasing-subsequence/"
+},
+{
+  "id": 237,
+  "title": "Longest Common Subsequence",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/longest-common-subsequence/"
+},
+{
+  "id": 238,
+  "title": "Edit Distance",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/edit-distance/"
+},
+{
+  "id": 239,
+  "title": "Word Break",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/word-break/"
+},
+{
+  "id": 240,
+  "title": "Decode Ways",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/decode-ways/"
+},
+{
+  "id": 241,
+  "title": "Partition Equal Subset Sum",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Dynamic Programming", "Knapsack"],
+  "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+},
+{
+  "id": 242,
+  "title": "Target Sum",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Dynamic Programming", "Knapsack"],
+  "url": "https://leetcode.com/problems/target-sum/"
+},
+{
+  "id": 243,
+  "title": "Maximum Product Subarray",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Adobe"],
+  "tags": ["Dynamic Programming", "Arrays"],
+  "url": "https://leetcode.com/problems/maximum-product-subarray/"
+},
+{
+  "id": 244,
+  "title": "Best Time to Buy and Sell Stock II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "tags": ["Dynamic Programming", "Greedy"],
+  "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+},
+{
+  "id": 245,
+  "title": "Best Time to Buy and Sell Stock with Cooldown",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "tags": ["Dynamic Programming", "Stocks"],
+  "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/"
+}
+,
+{
+  "id": 246,
+  "title": "Palindromic Substrings",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Google"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/palindromic-substrings/"
+},
+{
+  "id": 247,
+  "title": "Longest Palindromic Subsequence",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/longest-palindromic-subsequence/"
+},
+{
+  "id": 248,
+  "title": "Distinct Subsequences",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Meta", "Microsoft"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/distinct-subsequences/"
+},
+{
+  "id": 249,
+  "title": "Burst Balloons",
+  "difficulty": "Hard",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "tags": ["Dynamic Programming", "Interval DP"],
+  "url": "https://leetcode.com/problems/burst-balloons/"
+},
+{
+  "id": 250,
+  "title": "Regular Expression Matching",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Microsoft", "Meta"],
+  "tags": ["Dynamic Programming", "Strings"],
+  "url": "https://leetcode.com/problems/regular-expression-matching/"
+}
+]

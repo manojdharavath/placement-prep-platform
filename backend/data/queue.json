@@ -1,0 +1,179 @@
+[
+  {
+    "id": 176,
+    "title": "Implement Queue using Stacks",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "url": "https://leetcode.com/problems/implement-queue-using-stacks/"
+  },
+  {
+    "id": 177,
+    "title": "Design Circular Queue",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/design-circular-queue/"
+  },
+  {
+    "id": 178,
+    "title": "Moving Average from Data Stream",
+    "difficulty": "Easy",
+    "companies": ["Google", "Amazon"],
+    "url": "https://leetcode.com/problems/moving-average-from-data-stream/"
+  },
+  {
+    "id": 179,
+    "title": "Number of Recent Calls",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Google", "Microsoft"],
+    "url": "https://leetcode.com/problems/number-of-recent-calls/"
+  },
+  {
+    "id": 180,
+    "title": "Time Needed to Buy Tickets",
+    "difficulty": "Easy",
+    "companies": ["Amazon", "Adobe"],
+    "url": "https://leetcode.com/problems/time-needed-to-buy-tickets/"
+  },
+  {
+    "id": 181,
+    "title": "Dota2 Senate",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Google"],
+    "url": "https://leetcode.com/problems/dota2-senate/"
+  },
+  {
+    "id": 182,
+    "title": "Sliding Window Maximum",
+    "difficulty": "Hard",
+    "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+    "url": "https://leetcode.com/problems/sliding-window-maximum/"
+  },
+  {
+    "id": 183,
+    "title": "First Unique Character in a Stream",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/first-unique-number/"
+  },
+  {
+    "id": 184,
+    "title": "Queue Reconstruction by Height",
+    "difficulty": "Medium",
+    "companies": ["Google", "Amazon"],
+    "url": "https://leetcode.com/problems/queue-reconstruction-by-height/"
+  },
+  {
+    "id": 185,
+    "title": "Reveal Cards In Increasing Order",
+    "difficulty": "Medium",
+    "companies": ["Amazon", "Microsoft"],
+    "url": "https://leetcode.com/problems/reveal-cards-in-increasing-order/"
+  }
+,
+{
+  "id": 186,
+  "title": "Design Hit Counter",
+  "difficulty": "Medium",
+  "companies": ["Google", "Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/design-hit-counter/"
+},
+{
+  "id": 187,
+  "title": "Shortest Subarray with Sum at Least K",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Meta"],
+  "url": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/"
+},
+{
+  "id": 188,
+  "title": "Design Front Middle Back Queue",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/design-front-middle-back-queue/"
+},
+{
+  "id": 189,
+  "title": "Moving Average from Data Stream II",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/moving-average-from-data-stream/"
+},
+{
+  "id": 190,
+  "title": "Task Scheduler",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft", "Meta"],
+  "url": "https://leetcode.com/problems/task-scheduler/"
+},
+{
+  "id": 191,
+  "title": "Design Snake Game",
+  "difficulty": "Medium",
+  "companies": ["Google", "Amazon"],
+  "url": "https://leetcode.com/problems/design-snake-game/"
+},
+{
+  "id": 192,
+  "title": "Design Phone Directory",
+  "difficulty": "Medium",
+  "companies": ["Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/design-phone-directory/"
+},
+{
+  "id": 193,
+  "title": "Find Winner on a Tic Tac Toe Game",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/"
+},
+{
+  "id": 194,
+  "title": "Design Underground System",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft", "Google"],
+  "url": "https://leetcode.com/problems/design-underground-system/"
+},
+{
+  "id": 195,
+  "title": "Number of Students Unable to Eat Lunch",
+  "difficulty": "Easy",
+  "companies": ["Amazon", "Adobe"],
+  "url": "https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/"
+}
+,
+{
+  "id": 196,
+  "title": "Design Circular Deque",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Microsoft"],
+  "url": "https://leetcode.com/problems/design-circular-deque/"
+},
+{
+  "id": 197,
+  "title": "Reveal Cards In Increasing Order",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/reveal-cards-in-increasing-order/"
+},
+{
+  "id": 198,
+  "title": "First Unique Number",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google"],
+  "url": "https://leetcode.com/problems/first-unique-number/"
+},
+{
+  "id": 199,
+  "title": "Constrained Subsequence Sum",
+  "difficulty": "Hard",
+  "companies": ["Google", "Amazon", "Microsoft"],
+  "url": "https://leetcode.com/problems/constrained-subsequence-sum/"
+},
+{
+  "id": 200,
+  "title": "Jump Game VI",
+  "difficulty": "Medium",
+  "companies": ["Amazon", "Google", "Meta"],
+  "url": "https://leetcode.com/problems/jump-game-vi/"
+}
+]
