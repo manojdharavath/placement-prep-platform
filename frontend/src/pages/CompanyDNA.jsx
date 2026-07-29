@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-
-const API_URL = "http://localhost:5000";
+import API from "../services/api";
 
 const companyOptions = {
   Product: [
@@ -83,24 +82,19 @@ const difficultyConfig = {
 
 export default function CompanyDNA() {
   const [companyType, setCompanyType] = useState("Product");
-
   const [company, setCompany] = useState("Google");
-
   const [customCompany, setCustomCompany] = useState("");
 
   const [role, setRole] = useState(
     "Software Development Engineer"
   );
-
   const [customRole, setCustomRole] = useState("");
 
   const [preparationDays, setPreparationDays] =
     useState(30);
 
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState("");
-
   const [plan, setPlan] = useState(null);
 
   const [activeTab, setActiveTab] =
@@ -144,53 +138,37 @@ export default function CompanyDNA() {
           ? customRole.trim()
           : role;
 
+      // Validate company
       if (!finalCompany) {
         setError("Please enter a company name.");
         return;
       }
 
+      // Validate role
       if (!finalRole) {
         setError("Please enter a target role.");
-        return;
-      }
-
-      const token = localStorage.getItem("token");
-
-      if (!token) {
-        setError(
-          "Please login again before generating a preparation plan."
-        );
         return;
       }
 
       setLoading(true);
       setPlan(null);
 
-      const response = await fetch(
-        `${API_URL}/api/company-prep/generate`,
+      // Uses deployed backend from services/api.js
+      // Token is automatically attached by Axios interceptor
+      const { data } = await API.post(
+        "/company-prep/generate",
         {
-          method: "POST",
-
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-
-          body: JSON.stringify({
-            company: finalCompany,
-            companyType,
-            role: finalRole,
-            preparationDays: Number(preparationDays),
-          }),
+          company: finalCompany,
+          companyType,
+          role: finalRole,
+          preparationDays: Number(preparationDays),
         }
       );
 
-      const data = await response.json();
-
-      if (!response.ok) {
+      if (!data?.success || !data?.plan) {
         throw new Error(
-          data.message ||
-            "Failed to generate preparation plan"
+          data?.message ||
+            "Invalid preparation plan received."
         );
       }
 
@@ -200,8 +178,9 @@ export default function CompanyDNA() {
       console.error("Company Prep Error:", err);
 
       setError(
-        err.message ||
-          "Something went wrong. Please try again."
+        err.response?.data?.message ||
+          err.message ||
+          "Failed to generate preparation plan. Please try again."
       );
     } finally {
       setLoading(false);
@@ -293,9 +272,8 @@ export default function CompanyDNA() {
                 margin: 0,
               }}
             >
-              Generate a role-specific preparation
-              strategy, interview focus and roadmap
-              for your target company.
+              Generate a role-specific preparation strategy,
+              interview focus and roadmap for your target company.
             </p>
           </div>
 
@@ -322,44 +300,41 @@ export default function CompanyDNA() {
                 marginBottom: "22px",
               }}
             >
-              {[
-                "Product",
-                "Service",
-                "Core",
-                "Custom",
-              ].map((type) => (
-                <button
-                  key={type}
-                  onClick={() =>
-                    handleCompanyTypeChange(type)
-                  }
-                  style={{
-                    padding: "10px 20px",
-                    borderRadius: "10px",
+              {["Product", "Service", "Core", "Custom"].map(
+                (type) => (
+                  <button
+                    key={type}
+                    onClick={() =>
+                      handleCompanyTypeChange(type)
+                    }
+                    style={{
+                      padding: "10px 20px",
+                      borderRadius: "10px",
 
-                    border:
-                      companyType === type
-                        ? "1px solid #6366f1"
-                        : "1px solid #252540",
+                      border:
+                        companyType === type
+                          ? "1px solid #6366f1"
+                          : "1px solid #252540",
 
-                    background:
-                      companyType === type
-                        ? "rgba(99,102,241,0.14)"
-                        : "#111122",
+                      background:
+                        companyType === type
+                          ? "rgba(99,102,241,0.14)"
+                          : "#111122",
 
-                    color:
-                      companyType === type
-                        ? "#818cf8"
-                        : "#64748b",
+                      color:
+                        companyType === type
+                          ? "#818cf8"
+                          : "#64748b",
 
-                    cursor: "pointer",
-                    fontWeight: 700,
-                    fontSize: "13px",
-                  }}
-                >
-                  {type}
-                </button>
-              ))}
+                      cursor: "pointer",
+                      fontWeight: 700,
+                      fontSize: "13px",
+                    }}
+                  >
+                    {type}
+                  </button>
+                )
+              )}
             </div>
 
             {/* FORM */}
@@ -383,9 +358,7 @@ export default function CompanyDNA() {
                   <input
                     value={customCompany}
                     onChange={(e) =>
-                      setCustomCompany(
-                        e.target.value
-                      )
+                      setCustomCompany(e.target.value)
                     }
                     placeholder="e.g. Micron"
                     style={inputStyle}
@@ -398,16 +371,16 @@ export default function CompanyDNA() {
                     }
                     style={inputStyle}
                   >
-                    {companyOptions[
-                      companyType
-                    ]?.map((item) => (
-                      <option
-                        key={item}
-                        value={item}
-                      >
-                        {item}
-                      </option>
-                    ))}
+                    {companyOptions[companyType]?.map(
+                      (item) => (
+                        <option
+                          key={item}
+                          value={item}
+                        >
+                          {item}
+                        </option>
+                      )
+                    )}
                   </select>
                 )}
               </div>
@@ -423,9 +396,7 @@ export default function CompanyDNA() {
                   <input
                     value={customRole}
                     onChange={(e) =>
-                      setCustomRole(
-                        e.target.value
-                      )
+                      setCustomRole(e.target.value)
                     }
                     placeholder="e.g. Embedded Engineer"
                     style={inputStyle}
@@ -438,16 +409,16 @@ export default function CompanyDNA() {
                     }
                     style={inputStyle}
                   >
-                    {roleOptions[
-                      companyType
-                    ]?.map((item) => (
-                      <option
-                        key={item}
-                        value={item}
-                      >
-                        {item}
-                      </option>
-                    ))}
+                    {roleOptions[companyType]?.map(
+                      (item) => (
+                        <option
+                          key={item}
+                          value={item}
+                        >
+                          {item}
+                        </option>
+                      )
+                    )}
                   </select>
                 )}
               </div>
@@ -468,33 +439,13 @@ export default function CompanyDNA() {
                   }
                   style={inputStyle}
                 >
-                  <option value={7}>
-                    7 Days
-                  </option>
-
-                  <option value={14}>
-                    14 Days
-                  </option>
-
-                  <option value={21}>
-                    21 Days
-                  </option>
-
-                  <option value={30}>
-                    30 Days
-                  </option>
-
-                  <option value={45}>
-                    45 Days
-                  </option>
-
-                  <option value={60}>
-                    60 Days
-                  </option>
-
-                  <option value={90}>
-                    90 Days
-                  </option>
+                  <option value={7}>7 Days</option>
+                  <option value={14}>14 Days</option>
+                  <option value={21}>21 Days</option>
+                  <option value={30}>30 Days</option>
+                  <option value={45}>45 Days</option>
+                  <option value={60}>60 Days</option>
+                  <option value={90}>90 Days</option>
                 </select>
               </div>
             </div>
@@ -537,6 +488,7 @@ export default function CompanyDNA() {
                 color: "white",
                 fontSize: "14px",
                 fontWeight: 700,
+
                 cursor: loading
                   ? "not-allowed"
                   : "pointer",
@@ -574,8 +526,8 @@ export default function CompanyDNA() {
                   fontSize: "13px",
                 }}
               >
-                AI is analyzing your company,
-                role and preparation duration.
+                AI is analyzing your company, role and
+                preparation duration.
               </p>
             </div>
           )}
@@ -589,7 +541,6 @@ export default function CompanyDNA() {
               <div
                 style={{
                   ...cardStyle,
-
                   background:
                     "linear-gradient(135deg,rgba(99,102,241,0.12),rgba(139,92,246,0.05),#0f0f1e)",
                 }}
@@ -597,8 +548,7 @@ export default function CompanyDNA() {
                 <div
                   style={{
                     display: "flex",
-                    justifyContent:
-                      "space-between",
+                    justifyContent: "space-between",
                     gap: "20px",
                     flexWrap: "wrap",
                   }}
@@ -643,13 +593,10 @@ export default function CompanyDNA() {
                   >
                     <div
                       style={{
-                        padding:
-                          "10px 16px",
+                        padding: "10px 16px",
                         borderRadius: "10px",
-                        background:
-                          difficulty.bg,
-                        color:
-                          difficulty.color,
+                        background: difficulty.bg,
+                        color: difficulty.color,
                         fontWeight: 800,
                       }}
                     >
@@ -658,8 +605,7 @@ export default function CompanyDNA() {
 
                     <div
                       style={{
-                        padding:
-                          "10px 16px",
+                        padding: "10px 16px",
                         borderRadius: "10px",
                         background:
                           "rgba(99,102,241,0.1)",
@@ -710,20 +656,15 @@ export default function CompanyDNA() {
                         <span
                           key={index}
                           style={{
-                            padding:
-                              "8px 13px",
-                            borderRadius:
-                              "9px",
+                            padding: "8px 13px",
+                            borderRadius: "9px",
                             background:
                               "rgba(99,102,241,0.1)",
                             border:
                               "1px solid rgba(99,102,241,0.22)",
-                            color:
-                              "#a5b4fc",
-                            fontSize:
-                              "12px",
-                            fontWeight:
-                              600,
+                            color: "#a5b4fc",
+                            fontSize: "12px",
+                            fontWeight: 600,
                           }}
                         >
                           {area}
@@ -744,8 +685,7 @@ export default function CompanyDNA() {
                   width: "fit-content",
                   borderRadius: "12px",
                   background: "#0f0f1e",
-                  border:
-                    "1px solid #1e1e35",
+                  border: "1px solid #1e1e35",
                   flexWrap: "wrap",
                 }}
               >
@@ -761,8 +701,7 @@ export default function CompanyDNA() {
                       setActiveTab(key)
                     }
                     style={{
-                      padding:
-                        "9px 17px",
+                      padding: "9px 17px",
                       borderRadius: "9px",
                       border: "none",
 
@@ -787,13 +726,11 @@ export default function CompanyDNA() {
 
               {/* OVERVIEW */}
 
-              {activeTab ===
-                "overview" && (
+              {activeTab === "overview" && (
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns:
-                      "1fr 1fr",
+                    gridTemplateColumns: "1fr 1fr",
                     gap: "20px",
                   }}
                 >
@@ -804,8 +741,7 @@ export default function CompanyDNA() {
                       style={{
                         color: "#e2e8f0",
                         fontSize: "16px",
-                        margin:
-                          "0 0 20px",
+                        margin: "0 0 20px",
                       }}
                     >
                       Likely Interview Rounds
@@ -814,8 +750,7 @@ export default function CompanyDNA() {
                     <div
                       style={{
                         display: "flex",
-                        flexDirection:
-                          "column",
+                        flexDirection: "column",
                         gap: "12px",
                       }}
                     >
@@ -824,20 +759,16 @@ export default function CompanyDNA() {
                           <div
                             key={index}
                             style={{
-                              padding:
-                                "15px",
-                              borderRadius:
-                                "12px",
-                              background:
-                                "#111122",
+                              padding: "15px",
+                              borderRadius: "12px",
+                              background: "#111122",
                               border:
                                 "1px solid #1e1e35",
                             }}
                           >
                             <div
                               style={{
-                                display:
-                                  "flex",
+                                display: "flex",
                                 justifyContent:
                                   "space-between",
                                 gap: "10px",
@@ -845,10 +776,8 @@ export default function CompanyDNA() {
                             >
                               <strong
                                 style={{
-                                  color:
-                                    "#e2e8f0",
-                                  fontSize:
-                                    "13px",
+                                  color: "#e2e8f0",
+                                  fontSize: "13px",
                                 }}
                               >
                                 {index + 1}.{" "}
@@ -865,10 +794,8 @@ export default function CompanyDNA() {
                                         "Medium"
                                       ? "#f59e0b"
                                       : "#10b981",
-                                  fontSize:
-                                    "11px",
-                                  fontWeight:
-                                    700,
+                                  fontSize: "11px",
+                                  fontWeight: 700,
                                 }}
                               >
                                 {round.priority}
@@ -877,19 +804,13 @@ export default function CompanyDNA() {
 
                             <p
                               style={{
-                                color:
-                                  "#64748b",
-                                fontSize:
-                                  "12px",
-                                lineHeight:
-                                  1.6,
-                                margin:
-                                  "7px 0 0",
+                                color: "#64748b",
+                                fontSize: "12px",
+                                lineHeight: 1.6,
+                                margin: "7px 0 0",
                               }}
                             >
-                              {
-                                round.description
-                              }
+                              {round.description}
                             </p>
                           </div>
                         )
@@ -904,8 +825,7 @@ export default function CompanyDNA() {
                       style={{
                         color: "#e2e8f0",
                         fontSize: "16px",
-                        margin:
-                          "0 0 20px",
+                        margin: "0 0 20px",
                       }}
                     >
                       Important Topics
@@ -914,8 +834,7 @@ export default function CompanyDNA() {
                     <div
                       style={{
                         display: "flex",
-                        flexDirection:
-                          "column",
+                        flexDirection: "column",
                         gap: "12px",
                       }}
                     >
@@ -924,30 +843,24 @@ export default function CompanyDNA() {
                           <div
                             key={index}
                             style={{
-                              padding:
-                                "15px",
-                              borderRadius:
-                                "12px",
-                              background:
-                                "#111122",
+                              padding: "15px",
+                              borderRadius: "12px",
+                              background: "#111122",
                               border:
                                 "1px solid #1e1e35",
                             }}
                           >
                             <div
                               style={{
-                                display:
-                                  "flex",
+                                display: "flex",
                                 justifyContent:
                                   "space-between",
                               }}
                             >
                               <strong
                                 style={{
-                                  color:
-                                    "#cbd5e1",
-                                  fontSize:
-                                    "13px",
+                                  color: "#cbd5e1",
+                                  fontSize: "13px",
                                 }}
                               >
                                 {topic.topic}
@@ -963,10 +876,8 @@ export default function CompanyDNA() {
                                         "Medium"
                                       ? "#f59e0b"
                                       : "#10b981",
-                                  fontSize:
-                                    "11px",
-                                  fontWeight:
-                                    700,
+                                  fontSize: "11px",
+                                  fontWeight: 700,
                                 }}
                               >
                                 {topic.priority}
@@ -975,14 +886,10 @@ export default function CompanyDNA() {
 
                             <p
                               style={{
-                                color:
-                                  "#64748b",
-                                fontSize:
-                                  "12px",
-                                lineHeight:
-                                  1.6,
-                                margin:
-                                  "7px 0 0",
+                                color: "#64748b",
+                                fontSize: "12px",
+                                lineHeight: 1.6,
+                                margin: "7px 0 0",
                               }}
                             >
                               {topic.reason}
@@ -1005,8 +912,8 @@ export default function CompanyDNA() {
                       margin: "0 0 20px",
                     }}
                   >
-                    {plan.preparationDays}-Day
-                    Preparation Roadmap
+                    {plan.preparationDays}-Day Preparation
+                    Roadmap
                   </h3>
 
                   <div
@@ -1022,24 +929,18 @@ export default function CompanyDNA() {
                         <div
                           key={index}
                           style={{
-                            padding:
-                              "20px",
-                            borderRadius:
-                              "14px",
-                            background:
-                              "#111122",
+                            padding: "20px",
+                            borderRadius: "14px",
+                            background: "#111122",
                             border:
                               "1px solid #1e1e35",
                           }}
                         >
                           <div
                             style={{
-                              color:
-                                "#818cf8",
-                              fontSize:
-                                "12px",
-                              fontWeight:
-                                800,
+                              color: "#818cf8",
+                              fontSize: "12px",
+                              fontWeight: 800,
                             }}
                           >
                             {phase.period}
@@ -1047,10 +948,8 @@ export default function CompanyDNA() {
 
                           <h4
                             style={{
-                              color:
-                                "#e2e8f0",
-                              margin:
-                                "7px 0 13px",
+                              color: "#e2e8f0",
+                              margin: "7px 0 13px",
                             }}
                           >
                             {phase.title}
@@ -1061,23 +960,17 @@ export default function CompanyDNA() {
                               <div
                                 key={i}
                                 style={{
-                                  display:
-                                    "flex",
+                                  display: "flex",
                                   gap: "8px",
-                                  color:
-                                    "#94a3b8",
-                                  fontSize:
-                                    "12px",
-                                  marginBottom:
-                                    "8px",
-                                  lineHeight:
-                                    1.5,
+                                  color: "#94a3b8",
+                                  fontSize: "12px",
+                                  marginBottom: "8px",
+                                  lineHeight: 1.5,
                                 }}
                               >
                                 <span
                                   style={{
-                                    color:
-                                      "#6366f1",
+                                    color: "#6366f1",
                                   }}
                                 >
                                   •
@@ -1096,8 +989,7 @@ export default function CompanyDNA() {
 
               {/* STRATEGY */}
 
-              {activeTab ===
-                "strategy" && (
+              {activeTab === "strategy" && (
                 <div style={cardStyle}>
                   <h3
                     style={{
@@ -1118,56 +1010,44 @@ export default function CompanyDNA() {
                   >
                     {Object.entries(
                       plan.practiceStrategy || {}
-                    ).map(
-                      ([key, value]) => (
+                    ).map(([key, value]) => (
+                      <div
+                        key={key}
+                        style={{
+                          padding: "18px",
+                          borderRadius: "12px",
+                          background: "#111122",
+                          border:
+                            "1px solid #1e1e35",
+                        }}
+                      >
                         <div
-                          key={key}
                           style={{
-                            padding:
-                              "18px",
-                            borderRadius:
-                              "12px",
-                            background:
-                              "#111122",
-                            border:
-                              "1px solid #1e1e35",
+                            color: "#818cf8",
+                            fontWeight: 700,
+                            textTransform:
+                              "capitalize",
+                            marginBottom: "8px",
+                            fontSize: "13px",
                           }}
                         >
-                          <div
-                            style={{
-                              color:
-                                "#818cf8",
-                              fontWeight:
-                                700,
-                              textTransform:
-                                "capitalize",
-                              marginBottom:
-                                "8px",
-                              fontSize:
-                                "13px",
-                            }}
-                          >
-                            {key.replace(
-                              /([A-Z])/g,
-                              " $1"
-                            )}
-                          </div>
-
-                          <div
-                            style={{
-                              color:
-                                "#94a3b8",
-                              fontSize:
-                                "13px",
-                              lineHeight:
-                                1.6,
-                            }}
-                          >
-                            {value}
-                          </div>
+                          {key.replace(
+                            /([A-Z])/g,
+                            " $1"
+                          )}
                         </div>
-                      )
-                    )}
+
+                        <div
+                          style={{
+                            color: "#94a3b8",
+                            fontSize: "13px",
+                            lineHeight: 1.6,
+                          }}
+                        >
+                          {value}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
@@ -1192,8 +1072,7 @@ export default function CompanyDNA() {
                         style={{
                           display: "flex",
                           gap: "13px",
-                          padding:
-                            "14px 0",
+                          padding: "14px 0",
                           borderBottom:
                             "1px solid #1a1a2e",
                         }}
@@ -1203,21 +1082,16 @@ export default function CompanyDNA() {
                             width: "27px",
                             height: "27px",
                             flexShrink: 0,
-                            borderRadius:
-                              "8px",
+                            borderRadius: "8px",
                             display: "flex",
-                            alignItems:
-                              "center",
+                            alignItems: "center",
                             justifyContent:
                               "center",
                             background:
                               "rgba(99,102,241,0.12)",
-                            color:
-                              "#818cf8",
-                            fontSize:
-                              "12px",
-                            fontWeight:
-                              800,
+                            color: "#818cf8",
+                            fontSize: "12px",
+                            fontWeight: 800,
                           }}
                         >
                           {index + 1}
@@ -1225,12 +1099,9 @@ export default function CompanyDNA() {
 
                         <div
                           style={{
-                            color:
-                              "#94a3b8",
-                            lineHeight:
-                              1.6,
-                            fontSize:
-                              "13px",
+                            color: "#94a3b8",
+                            lineHeight: 1.6,
+                            fontSize: "13px",
                           }}
                         >
                           {tip}
@@ -1267,18 +1138,13 @@ export default function CompanyDNA() {
                       <div
                         key={index}
                         style={{
-                          padding:
-                            "12px 14px",
-                          borderRadius:
-                            "10px",
-                          background:
-                            "#111122",
+                          padding: "12px 14px",
+                          borderRadius: "10px",
+                          background: "#111122",
                           border:
                             "1px solid #1e1e35",
-                          color:
-                            "#94a3b8",
-                          fontSize:
-                            "12px",
+                          color: "#94a3b8",
+                          fontSize: "12px",
                         }}
                       >
                         ✓ {item}
