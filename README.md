@@ -179,55 +179,64 @@ PlacementPrep
 
 ## Dashboard
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/a4e7b1c9-45f4-4c22-a3be-e21a857bffaa" />
+)*
 
 ---
 
 ## Company Preparation
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/ef2fd0ce-8b9e-4618-960c-7eaa189d29e6" />
+)*
 
 ---
 
 ## DSA Tracker
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/233e72b8-385b-461e-a799-75c2940c04f2" />
+)*
 
 ---
 
 ## AI Mock Tests
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/4787f25a-958b-42bb-b34a-a8e2be0e2ae1" />
+)*
 
 ---
 
 ## Test Screen
 
-> *(Add Screenshot Here)*
+> *(<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/641614d1-bd7c-423d-a994-f883977330f8" />
+)*
 
 ---
 
 ## AI Interview Simulator
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/e07c034f-1be9-4537-a0e9-083e589f9e95" />
+)*
 
 ---
 
 ## Resume Analyzer
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/a9dc3389-5bb1-47e0-9f77-247f4e280af5" />
+)*
 
 ---
 
 ## Login Page
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/d8f8e2f6-d930-4b48-ad61-22cff835b1b0" />
+)*
 
 ---
 
 ## Register Page
 
-> *(Add Screenshot Here)*
+> *(<img width="1912" height="1022" alt="image" src="https://github.com/user-attachments/assets/8b446961-c22d-44ba-8d33-0c233fb58d53" />
+)*
 
 ---
 
@@ -240,7 +249,7 @@ git clone https://github.com/yourusername/placementprep.git
 ```
 
 ```bash
-cd placementprep
+cd placement-prep-platform
 ```
 
 ---
