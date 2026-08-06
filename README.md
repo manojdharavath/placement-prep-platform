@@ -1,178 +1,442 @@
-# PlacementPrep – AI-Powered Placement Preparation Platform
+# 🚀 PlacementPrep – AI Placement Preparation Platform
 
-PlacementPrep is a full-stack web application designed to help students prepare for campus placements through a single integrated platform.
+<div align="center">
 
-It combines DSA practice, mock assessments, company-specific preparation, resume analysis, AI-powered interview practice, and placement readiness tracking.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=jsonwebtokens)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-## Features
+### An AI-powered platform that helps students prepare for placements through DSA practice, AI-powered mock tests, resume analysis, interview simulation, and company-specific preparation roadmaps.
 
-- **User Authentication**
-  - Secure registration and login
-  - JWT-based authentication
-  - Protected routes
+</div>
 
-- **DSA Practice**
-  - Track DSA preparation
-  - Organize and monitor problem-solving progress
+---
 
-- **Mock Tests**
-  - Take placement-oriented assessments
-  - Track test performance
+# 📖 Overview
 
-- **Company DNA**
-  - Company-specific placement preparation
-  - Understand important preparation areas for different companies
+**PlacementPrep** is a full-stack AI-powered placement preparation platform developed using the **MERN Stack**. The platform brings together everything a student needs for placement preparation in one place.
 
-- **AI Resume Analyzer**
-  - Analyze resumes
-  - Receive AI-generated feedback and improvement suggestions
+Instead of switching between multiple websites for coding practice, resume analysis, mock interviews, and company preparation, PlacementPrep provides a single integrated platform powered by AI.
 
-- **AI Interview Simulator**
-  - Practice interview questions
-  - Receive AI-powered responses and feedback
+The application is designed with a modern responsive interface and works seamlessly across desktop, tablet, and mobile devices.
 
-- **Placement Readiness Dashboard**
-  - Centralized overview of preparation progress
-  - Placement Readiness Index (PRI)
-  - Tracks DSA, mock tests, consistency, and interview preparation
+---
 
-## Tech Stack
+# ✨ Key Features
 
-### Frontend
+## 📊 Smart Dashboard
+- Personalized placement readiness score
+- AI-generated preparation insights
+- Progress tracking
+- Quick action shortcuts
+- Fully responsive dashboard
+
+---
+
+## 💻 DSA Tracker
+
+- Track solved coding problems
+- Topic-wise filtering
+- Difficulty-based filtering
+- Search functionality
+- Progress analytics
+
+---
+
+## 📝 AI Mock Tests
+
+- AI-generated mock tests
+- Multiple difficulty levels
+- Topic-wise assessments
+- Instant evaluation
+- Performance tracking
+
+---
+
+## 🎯 Interactive Test Screen
+
+- Real-time timer
+- Question navigator
+- Progress tracking
+- Auto-save indicator
+- Keyboard shortcuts
+- AI performance report
+- Detailed explanations
+
+---
+
+## 🤖 AI Interview Simulator
+
+- Technical interview simulation
+- AI-generated interview questions
+- Performance scoring
+- Personalized feedback
+- Interview transcript
+- Interview summary
+
+---
+
+## 📄 AI Resume Analyzer
+
+- Resume upload
+- ATS score analysis
+- Resume grading
+- Strengths & weaknesses
+- Keyword analysis
+- Improvement suggestions
+- Placement readiness prediction
+
+---
+
+## 🏢 Company Preparation
+
+Generate AI-powered preparation roadmaps for companies including:
+
+- Product Companies
+- Service Companies
+- Core Companies
+- Custom Companies
+
+Role-specific preparation plans are also supported.
+
+---
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for:
+
+- 💻 Desktop
+- 📱 Mobile
+- 📟 Tablet
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
 
 - React.js
 - Vite
-- JavaScript
-- CSS
+- React Router DOM
 - Axios
-- React Router
+- Lucide React
 
-### Backend
+---
+
+## Backend
 
 - Node.js
 - Express.js
-- REST APIs
-- JWT Authentication
-
-### Database
-
 - MongoDB
 - Mongoose
+- JWT Authentication
+- bcrypt.js
 
-### AI Integration
+---
 
-- Groq API
+## AI Integration
 
-### Deployment
+- AI-powered Resume Analysis
+- AI Interview Generation
+- AI Preparation Roadmaps
+- AI Dashboard Insights
+- AI Mock Test Generation
 
-- Frontend: Vercel
-- Backend: Render
-- Database: MongoDB Atlas
+---
 
-## Project Architecture
-
-```text
-User
- │
- ▼
-React + Vite Frontend
- │
- │ REST API Requests
- ▼
-Node.js + Express Backend
- │
- ├── Authentication
- ├── DSA APIs
- ├── Mock Test APIs
- ├── Dashboard APIs
- ├── Resume Analyzer
- ├── Interview Simulator
- │
- ▼
-MongoDB Atlas
-```
-
-## Project Structure
+# 📂 Project Structure
 
 ```text
-placement-prep-platform/
+PlacementPrep
 │
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   └── services/
-│   └── package.json
+├── frontend
+│   ├── public
+│   ├── src
+│   │
+│   ├── components
+│   ├── context
+│   ├── pages
+│   ├── services
+│   ├── utils
+│   └── App.jsx
 │
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
+├── backend
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── utils
+│   └── server.js
 │
 └── README.md
 ```
 
-## Installation
+---
 
-Clone the repository:
+# 📸 Application Screenshots
+
+## Dashboard
+
+> *(Add Screenshot Here)*
+
+---
+
+## Company Preparation
+
+> *(Add Screenshot Here)*
+
+---
+
+## DSA Tracker
+
+> *(Add Screenshot Here)*
+
+---
+
+## AI Mock Tests
+
+> *(Add Screenshot Here)*
+
+---
+
+## Test Screen
+
+> *(Add Screenshot Here)*
+
+---
+
+## AI Interview Simulator
+
+> *(Add Screenshot Here)*
+
+---
+
+## Resume Analyzer
+
+> *(Add Screenshot Here)*
+
+---
+
+## Login Page
+
+> *(Add Screenshot Here)*
+
+---
+
+## Register Page
+
+> *(Add Screenshot Here)*
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
-git clone <your-repository-url>
-cd placement-prep-platform
+git clone https://github.com/yourusername/placementprep.git
 ```
 
-Install backend dependencies:
+```bash
+cd placementprep
+```
+
+---
+
+## Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside the backend directory:
+Create a `.env` file
 
 ```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-GROQ_API_KEY=your_groq_api_key
+PORT=5000
+
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+
+JWT_SECRET=YOUR_SECRET_KEY
+
+OPENAI_API_KEY=YOUR_API_KEY
 ```
 
-Start the backend:
+Run Backend
 
 ```bash
-node server.js
-```
-
-Install and start the frontend:
-
-```bash
-cd ../frontend
-npm install
 npm run dev
 ```
 
-## Security
+---
 
-Sensitive credentials such as database connection strings, JWT secrets, and API keys are stored using environment variables and are not committed to the repository.
+## Frontend Setup
 
-## Live Demo
+```bash
+cd frontend
+npm install
+```
 
-[View PlacementPrep Live](
-placement-prep-platform-kulkvu0fn-manojdharavaths-projects.vercel.app)
-## Future Improvements
+Run Frontend
 
-- Forgot password and email verification
-- Advanced placement analytics
-- More company-specific preparation data
-- Improved AI interview evaluation
-- Personalized preparation recommendations
+```bash
+npm run dev
+```
 
-## Author
+Application runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🔒 Authentication
+
+- JWT Authentication
+- Protected Routes
+- Secure Password Hashing
+- Login & Registration System
+
+---
+
+# 🌟 Highlights
+
+- Modern SaaS-inspired UI
+- Fully Responsive Design
+- AI-powered Learning Experience
+- Clean Component Architecture
+- REST API Integration
+- Secure Authentication
+- Interactive User Experience
+
+---
+
+# 🚀 Future Roadmap
+
+### 🔐 Authentication & Security
+- Forgot Password via Email Verification
+- Password Reset using Secure Tokens
+- Email Verification for New Accounts
+- Remember Me Functionality
+- Two-Factor Authentication (2FA)
+
+---
+
+### 🤖 AI Enhancements
+- AI Career Guidance Assistant
+- Personalized Learning Recommendations
+- Adaptive Mock Tests Based on Performance
+- AI Chatbot for Placement Queries
+- Company-Specific Interview Question Generation
+
+---
+
+### 📊 Analytics
+- Weekly & Monthly Progress Reports
+- Advanced Placement Readiness Analytics
+- Performance Charts & Visual Insights
+- AI Learning Recommendations
+
+---
+
+### 💻 Coding Practice
+- Daily Coding Challenges
+- Coding Streak System
+- Company-wise DSA Sheets
+- Contest Calendar
+- Bookmark Favorite Problems
+
+---
+
+### 📄 Resume Enhancements
+- Resume Version History
+- AI Resume Builder
+- Resume PDF Export
+- ATS Optimization Reports
+- Job Description Matching
+
+---
+
+### 🎤 Interview Enhancements
+- Voice-based AI Interviews
+- HR Interview Practice
+- Behavioral Interview Simulation
+- Downloadable Interview Reports
+- Company Interview Experience Sharing
+
+---
+
+### 🏆 Community Features
+- Global Leaderboard
+- Peer Challenges
+- Discussion Forum
+- Study Groups
+- Mentor Recommendations
+
+---
+
+### 📱 User Experience
+- Dark & Light Theme
+- Progressive Web App (PWA)
+- Push Notifications
+- Offline Support
+- Multi-language Support
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+1. Fork the repository
+
+2. Create a feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push the branch
+
+```bash
+git push origin feature-name
+```
+
+5. Create a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Developer
 
 **Dharavath Manoj**
 
-B.Tech – Electronics and Communication Engineering  
-Malaviya National Institute of Technology Jaipur
+🎓 B.Tech – Electronics & Communication Engineering
+
+🏫 Malaviya National Institute of Technology (MNIT), Jaipur
+
+💻 Passionate about Full-Stack Development, AI Applications, and Software Engineering.
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project useful, consider giving it a star on GitHub!
+
+**Thank you for visiting PlacementPrep! 🚀**
+
+</div>

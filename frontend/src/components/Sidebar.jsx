@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -22,10 +23,9 @@ const navItems = [
       </svg>
     ),
   },
-
   {
     path: "/company-dna",
-    label: "Company DNA",
+    label: "Company Prep",
     icon: (
       <svg
         width="19"
@@ -43,9 +43,8 @@ const navItems = [
       </svg>
     ),
   },
-
   {
-    path: "/dsa-tracker",
+    path: "/dsa",
     label: "DSA Tracker",
     icon: (
       <svg
@@ -63,7 +62,6 @@ const navItems = [
       </svg>
     ),
   },
-
   {
     path: "/mock-tests",
     label: "Mock Tests",
@@ -85,9 +83,8 @@ const navItems = [
       </svg>
     ),
   },
-
   {
-    path: "/resume",
+    path: "/resume-analyzer",
     label: "Resume Analyzer",
     icon: (
       <svg
@@ -105,7 +102,6 @@ const navItems = [
       </svg>
     ),
   },
-
   {
     path: "/interview",
     label: "AI Interview",
@@ -126,307 +122,265 @@ const navItems = [
   },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const { pathname } = useLocation();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const isTabletOrMobile = windowWidth <= 1024;
 
   return (
-    <aside
-      style={{
-        position: "fixed",
-        left: 0,
-        top: 0,
-        width: "256px",
-        height: "100vh",
-
-        display: "flex",
-        flexDirection: "column",
-
-        background: "#0d0d1c",
-        borderRight: "1px solid #1e1e35",
-
-        zIndex: 50,
-      }}
-    >
-      {/* ================= LOGO ================= */}
-
-      <div
+    <>
+      <aside
         style={{
-          height: "76px",
-          padding: "0 20px",
-
-          display: "flex",
-          alignItems: "center",
-          gap: "12px",
-
-          borderBottom: "1px solid #1e1e35",
-          flexShrink: 0,
-        }}
-      >
-        <div
-          style={{
-            width: "42px",
-            height: "42px",
-
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-
-            flexShrink: 0,
-
-            borderRadius: "12px",
-
-            background:
-              "linear-gradient(135deg, #6366f1, #8b5cf6)",
-
-            color: "#ffffff",
-            fontSize: "19px",
-            fontWeight: 800,
-
-            boxShadow:
-              "0 5px 18px rgba(99,102,241,0.35)",
-          }}
-        >
-          P
-        </div>
-
-        <div>
-          <div
-            style={{
-              color: "#f8fafc",
-              fontSize: "16px",
-              fontWeight: 750,
-              lineHeight: 1.2,
-              letterSpacing: "-0.2px",
-            }}
-          >
-            PlacementPrep
-          </div>
-
-          <div
-            style={{
-              color: "#818cf8",
-              fontSize: "12px",
-              fontWeight: 600,
-              marginTop: "4px",
-            }}
-          >
-            Pro Platform
-          </div>
-        </div>
-      </div>
-
-      {/* ================= NAVIGATION LABEL ================= */}
-
-      <div
-        style={{
-          padding: "28px 20px 10px",
-        }}
-      >
-        <span
-          style={{
-            color: "#475569",
-            fontSize: "11px",
-            fontWeight: 750,
-
-            letterSpacing: "1.2px",
-            textTransform: "uppercase",
-          }}
-        >
-          Navigation
-        </span>
-      </div>
-
-      {/* ================= NAVIGATION ITEMS ================= */}
-
-      <nav
-        style={{
-          flex: 1,
-
+          position: "fixed",
+          left: isTabletOrMobile ? (sidebarOpen ? 0 : "-260px") : 0,
+          transition: "left .3s ease",
+          top: 0,
+          width: "256px",
+          height: "100vh",
           display: "flex",
           flexDirection: "column",
-          gap: "6px",
-
-          padding: "4px 12px 20px",
-
-          overflowY: "auto",
+          background: "#0d0d1c",
+          borderRight: "1px solid #1e1e35",
+          zIndex: 200,
         }}
       >
-        {navItems.map((item) => {
-          const isActive =
-            pathname === item.path ||
-            (item.path === "/mock-tests" &&
-              pathname.startsWith("/test"));
-
-          return (
-            <Link
-              key={item.path}
-              to={item.path}
-              style={{
-                textDecoration: "none",
-                display: "block",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-
-                  minHeight: "50px",
-
-                  display: "flex",
-                  alignItems: "center",
-
-                  gap: "13px",
-
-                  padding: "0 14px",
-
-                  borderRadius: "11px",
-
-                  background: isActive
-                    ? "linear-gradient(90deg, rgba(99,102,241,0.18), rgba(99,102,241,0.09))"
-                    : "transparent",
-
-                  border: `1px solid ${
-                    isActive
-                      ? "rgba(99,102,241,0.32)"
-                      : "transparent"
-                  }`,
-
-                  color: isActive
-                    ? "#d5dcff"
-                    : "#94a3b8",
-
-                  fontSize: "14px",
-                  fontWeight: isActive ? 650 : 500,
-
-                  transition:
-                    "background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease",
-
-                  cursor: "pointer",
-                }}
-                onMouseEnter={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.background =
-                      "rgba(255,255,255,0.04)";
-
-                    e.currentTarget.style.color =
-                      "#d1d5db";
-
-                    e.currentTarget.style.transform =
-                      "translateX(2px)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.background =
-                      "transparent";
-
-                    e.currentTarget.style.color =
-                      "#94a3b8";
-
-                    e.currentTarget.style.transform =
-                      "translateX(0)";
-                  }
-                }}
-              >
-                {/* ICON */}
-
-                <span
-                  style={{
-                    width: "22px",
-
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-
-                    flexShrink: 0,
-
-                    color: isActive
-                      ? "#8b8fff"
-                      : "inherit",
-                  }}
-                >
-                  {item.icon}
-                </span>
-
-                {/* LABEL */}
-
-                <span
-                  style={{
-                    flex: 1,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {item.label}
-                </span>
-
-                {/* ACTIVE DOT */}
-
-                {isActive && (
-                  <span
-                    style={{
-                      width: "6px",
-                      height: "6px",
-
-                      flexShrink: 0,
-
-                      borderRadius: "50%",
-
-                      background: "#818cf8",
-
-                      boxShadow:
-                        "0 0 10px rgba(129,140,248,0.85)",
-                    }}
-                  />
-                )}
-              </div>
-            </Link>
-          );
-        })}
-      </nav>
-
-      {/* ================= BOTTOM ================= */}
-
-      <div
-        style={{
-          padding: "18px 20px 20px",
-
-          borderTop: "1px solid #1e1e35",
-
-          flexShrink: 0,
-        }}
-      >
+        {/* LOGO */}
         <div
           style={{
-            padding: "11px 12px",
-
-            borderRadius: "10px",
-
-            background: "rgba(99,102,241,0.04)",
-            border: "1px solid rgba(99,102,241,0.08)",
+            height: "76px",
+            padding: "0 20px",
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            borderBottom: "1px solid #1e1e35",
+            flexShrink: 0,
           }}
         >
           <div
             style={{
-              color: "#64748b",
-              fontSize: "11px",
-              fontWeight: 500,
+              width: "42px",
+              height: "42px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
+              borderRadius: "12px",
+              background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
+              color: "#ffffff",
+              fontSize: "19px",
+              fontWeight: 800,
+              boxShadow: "0 5px 18px rgba(99,102,241,0.35)",
             }}
           >
-            Placement preparation
+            P
           </div>
 
-          <div
-            style={{
-              color: "#94a3b8",
-              fontSize: "12px",
-              fontWeight: 600,
-              marginTop: "3px",
-            }}
-          >
-            Learn • Practice • Improve
+          <div>
+            <div
+              style={{
+                color: "#f8fafc",
+                fontSize: "16px",
+                fontWeight: 750,
+                lineHeight: 1.2,
+                letterSpacing: "-0.2px",
+              }}
+            >
+              PlacementPrep
+            </div>
+
+            <div
+              style={{
+                color: "#818cf8",
+                fontSize: "12px",
+                fontWeight: 600,
+                marginTop: "4px",
+              }}
+            >
+              Pro Platform
+            </div>
           </div>
         </div>
-      </div>
-    </aside>
+
+        {/* NAVIGATION LABEL */}
+        <div style={{ padding: "28px 20px 10px" }}>
+          <span
+            style={{
+              color: "#475569",
+              fontSize: "11px",
+              fontWeight: 750,
+              letterSpacing: "1.2px",
+              textTransform: "uppercase",
+            }}
+          >
+            Navigation
+          </span>
+        </div>
+
+        {/* NAVIGATION ITEMS */}
+        <nav
+          style={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            gap: "6px",
+            padding: "4px 12px 20px",
+            overflowY: "auto",
+          }}
+        >
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.path ||
+              (item.path === "/mock-tests" && pathname.startsWith("/test"));
+
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => {
+                  if (isTabletOrMobile) {
+                    setSidebarOpen(false);
+                  }
+                }}
+                style={{
+                  textDecoration: "none",
+                  display: "block",
+                }}
+              >
+                <div
+                  style={{
+                    position: "relative",
+                    minHeight: "50px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "13px",
+                    padding: "0 14px",
+                    borderRadius: "11px",
+                    background: isActive
+                      ? "linear-gradient(90deg, rgba(99,102,241,0.18), rgba(99,102,241,0.09))"
+                      : "transparent",
+                    border: `1px solid ${
+                      isActive ? "rgba(99,102,241,0.32)" : "transparent"
+                    }`,
+                    color: isActive ? "#d5dcff" : "#94a3b8",
+                    fontSize: "14px",
+                    fontWeight: isActive ? 650 : 500,
+                    transition:
+                      "background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease",
+                    cursor: "pointer",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.background =
+                        "rgba(255,255,255,0.04)";
+                      e.currentTarget.style.color = "#d1d5db";
+                      e.currentTarget.style.transform = "translateX(2px)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.background = "transparent";
+                      e.currentTarget.style.color = "#94a3b8";
+                      e.currentTarget.style.transform = "translateX(0)";
+                    }
+                  }}
+                >
+                  {/* ICON */}
+                  <span
+                    style={{
+                      width: "22px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      color: isActive ? "#8b8fff" : "inherit",
+                    }}
+                  >
+                    {item.icon}
+                  </span>
+
+                  {/* LABEL */}
+                  <span style={{ flex: 1, whiteSpace: "nowrap" }}>
+                    {item.label}
+                  </span>
+
+                  {/* ACTIVE DOT */}
+                  {isActive && (
+                    <span
+                      style={{
+                        width: "6px",
+                        height: "6px",
+                        flexShrink: 0,
+                        borderRadius: "50%",
+                        background: "#818cf8",
+                        boxShadow: "0 0 10px rgba(129,140,248,0.85)",
+                      }}
+                    />
+                  )}
+                </div>
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* BOTTOM */}
+        <div
+          style={{
+            padding: "18px 20px 20px",
+            borderTop: "1px solid #1e1e35",
+            flexShrink: 0,
+          }}
+        >
+          <div
+            style={{
+              padding: "11px 12px",
+              borderRadius: "10px",
+              background: "rgba(99,102,241,0.04)",
+              border: "1px solid rgba(99,102,241,0.08)",
+            }}
+          >
+            <div
+              style={{
+                color: "#64748b",
+                fontSize: "11px",
+                fontWeight: 500,
+              }}
+            >
+              Placement preparation
+            </div>
+
+            <div
+              style={{
+                color: "#94a3b8",
+                fontSize: "12px",
+                fontWeight: 600,
+                marginTop: "3px",
+              }}
+            >
+              Learn • Practice • Improve
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* MOBILE BACKDROP OVERLAY */}
+      {sidebarOpen && isTabletOrMobile && (
+        <div
+          onClick={() => setSidebarOpen(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,.45)",
+            zIndex: 150,
+          }}
+        />
+      )}
+    </>
   );
 }

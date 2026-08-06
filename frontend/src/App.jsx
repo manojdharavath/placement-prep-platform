@@ -75,9 +75,9 @@ function App() {
         }
       />
 
-      {/* DSA Tracker */}
+      {/* DSA Tracker - Updated path to match Sidebar (/dsa) */}
       <Route
-        path="/dsa-tracker"
+        path="/dsa"
         element={
           <ProtectedRoute>
             <DsaTracker />
@@ -115,9 +115,9 @@ function App() {
         }
       />
 
-      {/* Resume Analyzer */}
+      {/* Resume Analyzer - Updated path to match Sidebar (/resume-analyzer) */}
       <Route
-        path="/resume"
+        path="/resume-analyzer"
         element={
           <ProtectedRoute>
             <ResumeAnalyzer />
